@@ -2,8 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import MainLayout from '../pages/MainLayout';
-import Main from '../pages/main/Main';
-import { RouterFill } from 'react-bootstrap-icons';
+import MainPage from '../pages/mainPage/MainPage';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +11,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Main />,
+        element: <MainPage />,
       },
     ],
   },
