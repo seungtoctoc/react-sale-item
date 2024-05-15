@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-export default function TitleBar() {
+export default function SearchBar() {
   return (
     <div>
       <Navbar expand='lg' className='bg-body-tertiary'>
