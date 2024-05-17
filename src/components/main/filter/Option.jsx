@@ -5,17 +5,17 @@ export default function Option(props) {
   const [clicked, setClicked] = useState(false);
 
   const optionName = props.optionName;
-  const addOption = props.addOption;
-  const removeOption = props.removeOption;
+  const includeOption = props.includeOption;
+  const exceptOption = props.exceptOption;
 
   const clickOption = () => {
     if (clicked) {
-      removeOption(optionName);
+      exceptOption(optionName);
       setClicked(false);
       return;
     }
 
-    addOption(optionName);
+    includeOption(optionName);
     setClicked(true);
   };
 

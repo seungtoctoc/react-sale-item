@@ -1,15 +1,21 @@
 import axios from 'axios';
 
-export async function getProducts(
+export const getProducts = async (
   selectedTypes,
   selectedBrands,
-  selectedSortby
-) {
+  selectedSortby,
+  searchWord,
+  limit,
+  current
+) => {
   try {
     const body = {
-      selectedTypes: selectedTypes,
-      selectedBrands: selectedBrands,
-      selectedSortby: selectedSortby,
+      type: selectedTypes,
+      brand: selectedBrands,
+      sortby: selectedSortby,
+      searchWord: searchWord,
+      limit: limit,
+      current: current,
     };
 
     const url = '/api/products';
@@ -19,4 +25,4 @@ export async function getProducts(
   } catch (err) {
     console.log(err);
   }
-}
+};

@@ -5,26 +5,15 @@ import Option from './Option';
 export default function OptionBundle(props) {
   const title = props.title;
   const options = props.options;
-  const selectedOptions = props.selectedOptions;
-  const setSelectedOptions = props.setSelectedOptions;
-
-  const addOption = (optionToAdd) => {
-    setSelectedOptions([...selectedOptions, optionToAdd]);
-  };
-
-  const removeOption = (optionToRemove) => {
-    const updatedOptions = selectedOptions.filter(
-      (selectedOption) => selectedOption !== optionToRemove
-    );
-    setSelectedOptions(updatedOptions);
-  };
+  const includeOption = props.includeOption;
+  const exceptOption = props.exceptOption;
 
   const optionComponents = options.map((option, idx) => (
     <Option
       key={option}
       optionName={option}
-      addOption={addOption}
-      removeOption={removeOption}
+      includeOption={includeOption}
+      exceptOption={exceptOption}
     />
   ));
 
