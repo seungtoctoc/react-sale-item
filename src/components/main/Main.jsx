@@ -25,8 +25,9 @@ export default function Main() {
       searchWord,
       limit,
       current
-    ).then((updatedProducts) => {
-      setProducts(updatedProducts);
+    ).then((resp) => {
+      setProducts(resp.products);
+      setTotalCount(resp.totalCount);
     });
 
     // setCount

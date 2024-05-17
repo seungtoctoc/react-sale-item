@@ -14,13 +14,13 @@ export default function SortBy(props) {
           variant='light'
           id='dropdown-basic'
         >
-          Dropdown Button
+          추천순
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item href='#/action-1'>Action</Dropdown.Item>
-          <Dropdown.Item href='#/action-2'>Another action</Dropdown.Item>
-          <Dropdown.Item href='#/action-3'>Something else</Dropdown.Item>
+          <Dropdown.Item>할인율순</Dropdown.Item>
+          <Dropdown.Item>낮은 가격순</Dropdown.Item>
+          <Dropdown.Item>높은 가격순</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </div>
