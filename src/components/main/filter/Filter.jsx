@@ -17,7 +17,7 @@ export default function Filter(props) {
   const types = ['FOOTWEAR', 'APPAREL'];
 
   return (
-    <div>
+    <div className='mb-1'>
       <SearchBar setSearchWord={setSearchWord} />
       <SortBy totalCount={totalCount} setSelectedSortby={setSelectedSortby} />
       <OptionBundle

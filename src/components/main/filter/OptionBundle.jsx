@@ -18,8 +18,8 @@ export default function OptionBundle(props) {
   ));
 
   return (
-    <div className='flex h-12 justify-center'>
-      <p className='font-bold mr-3 mt-1'>{title}</p>
+    <div className='flex overflow-x-auto whitespace-no-wrap h-12 justify-center gap-2'>
+      <p className='font-bold mt-1 flex-shrink-0'>{title}</p>
 
       {optionComponents}
     </div>

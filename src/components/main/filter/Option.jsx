@@ -21,7 +21,7 @@ export default function Option(props) {
 
   return (
     <div
-      className={`mr-2 h-9 border rounded-xl hover:bg-gray-100 ${
+      className={`h-9 border rounded-xl hover:bg-gray-100 ${
         clicked ? 'bg-gray-200' : ''
       }`}
       onClick={() => clickOption()}
