@@ -11,11 +11,12 @@ export default function Products(props) {
     <div className='container d-flex flex-wrap'>
       {products.map((product, index) => (
         <div
+          key={product._id}
           style={{
             width: isSmallScreen ? '50%' : '33.333%',
           }}
         >
-          <Product key={product._id} product={product} />
+          <Product product={product} />
         </div>
       ))}
     </div>

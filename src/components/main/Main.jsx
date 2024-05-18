@@ -18,6 +18,7 @@ export default function Main() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+    console.log('update products');
     getProducts(
       selectedTypes,
       selectedBrands,
