@@ -2,6 +2,11 @@ import React from 'react';
 
 export default function Product(props) {
   const product = props.product;
+
+  // if (!product || !product.price) {
+  //   return null;
+  // }
+
   const discountPercentage = product.price.discountRate * 100;
   const link = 'https://' + product.link;
 

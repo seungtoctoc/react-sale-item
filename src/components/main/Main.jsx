@@ -15,17 +15,19 @@ export default function Main() {
   const [totalCount, setTotalCount] = useState(0);
 
   const limit = 24;
-  const [current, setCurrent] = useState(0);
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
     console.log('update products');
+    setPage(0);
+
     getProducts(
       selectedTypes,
       selectedBrands,
       selectedSortby,
       searchWord,
       limit,
-      current
+      page
     ).then((resp) => {
       setProducts(resp.products);
       setTotalCount(resp.totalCount);
@@ -33,9 +35,6 @@ export default function Main() {
 
     // setCount
   }, [selectedBrands, selectedTypes, selectedSortby, searchWord]);
-
-  // todo : 스크롤 -> set current+1
-  // todo: current 변경 -> 리스트 "추가""
 
   const includeBrand = (brandToAdd) => {
     setSelectedBrands([...selectedBrands, brandToAdd]);
@@ -57,6 +56,21 @@ export default function Main() {
     setSelectedTypes(updatedTypes);
   };
 
+  const updatePage = () => {
+    setPage((prevPage) => prevPage + 1);
+
+    getProducts(
+      selectedTypes,
+      selectedBrands,
+      selectedSortby,
+      searchWord,
+      limit,
+      page
+    ).then((resp) => {
+      setProducts((prevProducts) => [...prevProducts, ...resp.products]);
+    });
+  };
+
   return (
     <div>
       <Filter
@@ -68,7 +82,7 @@ export default function Main() {
         setSearchWord={setSearchWord}
         totalCount={totalCount}
       />
-      <Products products={products} />
+      <Products products={products} updatePage={updatePage} page={page} />
     </div>
   );
 }
