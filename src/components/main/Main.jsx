@@ -82,7 +82,7 @@ export default function Main() {
         setSearchWord={setSearchWord}
         totalCount={totalCount}
       />
-      <Products products={products} updatePage={updatePage} page={page} />
+      <Products products={products} updatePage={updatePage} />
     </div>
   );
 }
