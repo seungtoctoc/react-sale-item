@@ -31,6 +31,8 @@ export default function Products(props) {
         }}
       >
         <Product product={product} />
+
+        {index == products.length - 10 ? <div ref={ref}></div> : null}
       </div>
     ));
     setProductComponents(updatedProductComponents);
@@ -39,7 +41,6 @@ export default function Products(props) {
   return (
     <div key={`${products.length}`} className='container d-flex flex-wrap'>
       {productComponents}
-      <div ref={ref}></div>
     </div>
   );
 }
