@@ -18,7 +18,9 @@ export default function Product(props) {
           <p className='text-lg font-semibold'>{product.title}</p>
           <p className='text-gray-500'>{product.subtitle}</p>
           <div className='flex gap-2 mt-2 align-items-center'>
-            <p className='text-lg text-green-600'>{discountPercentage}%</p>
+            <p className='text-lg text-green-600'>
+              {Math.round(discountPercentage)}%
+            </p>
             <p className='text-sm text-gray-500 line-through'>
               {product.price.fullPrice}
             </p>

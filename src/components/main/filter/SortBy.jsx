@@ -16,7 +16,7 @@ export default function SortBy(props) {
   };
 
   return (
-    <div className='container flex justify-between pt-3 pb-2 border-b mb-3'>
+    <div className='container flex justify-between pt-3 pb-2 border-b mb-3 '>
       <p className='text-lg ml-2'>{totalCount}개 항목</p>
       <Dropdown>
         <Dropdown.Toggle
